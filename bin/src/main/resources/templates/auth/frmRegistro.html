@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="card">
+		<div class="card-header">REGISTRO</div>
+		<div class="card-body">
+			<form method="post" th:action="@{/auth/guardarUsuario}">
+				<div class="mb-3">
+					<label for="nomusuario" class="form-label">NOM USUARIO</label> <input
+						type="text" class="form-control" id="nomusuario" name="nomusuario">
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">CORREO</label> <input
+						type="email" class="form-control" id="email" name="email">
+				</div>
+				<div class="mb-3">
+					<label for="password" class="form-label">CONTRASEÑA</label> <input
+						type="password" class="form-control" id="password"
+						name="password">
+				</div>
+				<div class="mb-3">
+					<label for="nombres" class="form-label">NOMBRE</label> <input
+						type="text" class="form-control" id="nombres" name="nombres">
+				</div>
+				<div class="mb-3">
+					<label for="apellidos" class="form-label">APELLIDO</label> <input
+						type="text" class="form-control" id="apellidos" name="apellidos">
+				</div>
+				<button type="submit" class="btn btn-primary">REGISTRAR</button>
+				<a th:href="@{/auth/login}" class="btn btn-primary">VOLVER</a>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
